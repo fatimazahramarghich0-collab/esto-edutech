@@ -1,0 +1,26 @@
+.deleted {
+    background-color: #ffe6e6; /* Couleur de fond pour indiquer la suppression */
+    transition: background-color 0.5s ease; /* Animation de transition */
+}
+.message-lu {
+    background-color: #f2f2f2; /* Couleur de fond gris clair */
+    border-left: 4px solid #ccc; /* Bordure gauche grise */
+    font-weight: bold; /* Par exemple, utilisez une police plus grasse pour indiquer que le message est lu */
+    color: green;
+}
+
+/* style.css */
+
+.read-message {
+    display: none; /* Masquer les messages */
+}
+.marquer-lu {
+    border: none; /* Supprimer la bordure */
+    outline: none; /* Supprimer le contour */
+  }
+  
+  .marquer-lu .fa-eye {
+    color: blue; /* Changer la couleur des yeux */
+    font-size: 24px; /* Changer la taille des yeux */
+  }
+  

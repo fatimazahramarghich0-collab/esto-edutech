@@ -1,0 +1,29 @@
+/* Message style*/
+
+.alert-message {
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-left: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.color-red {
+    color: red;
+}
+
+.color-green {
+    color: #48e348;
+}
+
+.container-divs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 3rem;
+}
+
+.form_container {
+    width: 60%;
+}

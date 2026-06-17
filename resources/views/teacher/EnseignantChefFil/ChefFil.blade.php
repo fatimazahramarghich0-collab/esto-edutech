@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('assets/img/apple-icon.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('assets/images/logoest.png') }}">
+    <title>
+        Enseignant | ESTO EDU-TECH
+    </title>
+    <!-- Fonts and icons -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <!-- Nucleo Icons -->
+    <link href="{{ asset('assets/css/nucleo-icons.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/css/nucleo-svg.css') }}" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <link href="{{ asset('assets/css/nucleo-svg.css') }}" rel="stylesheet" />
+    <!-- CSS Files -->
+    <link id="pagestyle" href="{{ asset('assets/css/soft-ui-dashboard.css?v=1.0.7') }}" rel="stylesheet" />
+    <!-- Nepcha Analytics (nepcha.com) -->
+    <!-- Nepcha is an easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
+    <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
+    <style>
+        .sector-name {
+            color: #c90c9e;
+            /* Default button color */
+        }
+    </style>
+</head>
+
+<body class="g-sidenav-show bg-gray-100">
+<!-- Nav Bar -->
+<x-teacher.sidebar></x-teacher.sidebar>
+<main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg">
+    <!-- Navbar -->
+    <x-navbar-teacher :pageName="'Chef de filière '"/>
+    <div class="container-fluid py-4">
+        <div class="row">
+            <div class="col-12">
+                <div class="card-header pb-0">
+                    <h6 >Semestres de la filière <strong class="sector-name ">{{ $sector->name }}</strong></h6>
+                </div><br>
+                <div class="card mb-4">
+                    <div class="card-body px-0 pt-0 pb-2">
+                        <div class="table-responsive p-0">
+                            <table class="table align-items-center mb-0">
+                                <thead>
+                                <tr>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Semestre</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Module</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Matière</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Enseignant</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Enseignant choisi</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @foreach($semesters as $semester)
+                                    @foreach($semester->modules as $index => $module)
+                                        @foreach($module->subjects as $subIndex => $subject)
+                                            <tr>
+                                                @if ($index == 0 && $subIndex == 0)
+                                                    <td rowspan="{{ $semester->modules->sum(fn($m) => $m->subjects->count()) }}">
+                                                        <strong>{{ $semester->semesterName }}</strong>
+                                                    </td>
+                                                @endif
+                                                @if ($subIndex == 0)
+                                                    <td rowspan="{{ $module->subjects->count() }}">
+                                                        {{ $module->name }}
+                                                    </td>
+                                                @endif
+                                                <td>{{ $subject->name }}</td>
+                                                <td>
+                                                    @if ($subject->teacher)
+                                                        {{ $subject->teacher->name }}
+                                                    @else
+                                                        - Enseignant non attribué
+                                                    @endif
+                                                </td>
+                                                <td>
+                                                    <form action="{{ route('assign-teacher', ['subject' => $subject->id]) }}" method="POST">
+                                                        @csrf
+                                                        <select name="teacher_id" id="teacher_id_{{ $subject->id }}" class="form-control form-control-sm">
+                                                            <option value="">Sélectionner un enseignant</option>
+                                                            @foreach ($teachers as $teacher)
+                                                                <option value="{{ $teacher->id }}">{{ $teacher->name }}</option>
+                                                            @endforeach
+                                                        </select>
+                                                        <button type="submit" class="btn btn-primary btn-sm mt-1">Attribuer</button>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                    @endforeach
+                                @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <x-footerAdmin />
+</main>
+
+<!-- Core JS Files -->
+<script src="{{ asset('assets/js/core/popper.min.js') }}"></script>
+<script src="{{ asset('assets/js/core/bootstrap.min.js') }}"></script>
+<script src="{{ asset('assets/js/plugins/perfect-scrollbar.min.js') }}"></script>
+<script src="{{ asset('assets/js/plugins/smooth-scrollbar.min.js') }}"></script>
+<script src="{{ asset('assets/js/plugins/chartjs.min.js') }}"></script>
+<!-- Github buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
+<script src="{{ asset('assets/js/soft-ui-dashboard.min.js?v=1.0.7') }}"></script>
+</body>
+
+</html>

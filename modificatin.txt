@@ -1,0 +1,89 @@
+//Test
+
+Home:
+		--Lien en rouge.
+		--le hover de la photo.
+
+
+Admin:
+
+--Abderrahim: Ajouter le button Matiere pour ajouter le matiere en selectionant la filiere
+
+	//message
+		-- La table message les lien next precedant
+		--l'affichage de message il doit etre acoter du button
+
+	//Etudiant
+		-- Page etudiant le model d'erreur dans l'importation de csv
+		-- le model des erreurs pour la modification de l'etudiant
+		-- Ajouter la validation pour les input, email |unique:email, chufi l code dyal
+
+	//Departements
+		-- Changer les icon use fontawsoom
+
+		--Regler le chef de sector et le chef dep il doit etre unique : ok
+
+	//Filieres
+		--Changer les icon
+		--Changer la couleur de la filiers
+		--Ajouter padding dans le formulair ajouter filieres
+		--Changer alert supprimer
+		--alert ne fonction pass
+		--supprimer parametre (fix-plugin)
+		--Supprimer border de l'image de modul dans filieres
+		--Affecter a un module a sans creation une matiers avec le meme nom
+
+	//Enseignant
+		--CHanger les buttons modifier et supprimer a icon
+		--Centrer les td de  chef departement filieres
+		--Ajouter simplePaginate
+		--Mettre en haut la table
+		--Reviser la validation
+		--utiliser le componant <x-form-error name="" />
+
+//Teacher
+
+--Abderrahim: ajouter column name dans la base de donnees (exams), avec la modification de la factory : ok
+
+	//Accuiel
+		--Wissal
+
+	//Notes
+		--Imprimer supprimer border input
+		--Supprimer fixed-plugin parametre
+		--Change type par name
+
+	//Matieres
+		--Border radius
+		--Un seul retour
+		--Modifier les icon
+		--ajouter un peux de padding matlas9ich m3a l7it
+		--Modifier l'erreur "Aucun étudiant trouvé pour ce secteur." dans exams, pour que il s'affiche une seule fois
+		--Ajouter l'exam en utilisant un formulaire
+		--Afficher les exams (nom,type...)
+
+	//Absence
+		--Ajouter la table pour voir les absence en selectionant en se bassant sur la matier , et ajouter la fonctionaliter pour permettre de justifier une absence.
+		--Dabri chi hal l lien dyal cancel
+
+	//Chef de departement
+		--Changer les icon
+		--3dar le button dyal modifie
+		--Supprimer l'image
+		--Supprimer le fixed-plugin
+
+	//Charge Horaire
+		--ajouter la transition pour la transform de button ajouter charge horaire
+		--Ajouter button modifier charge horaire
+		--Regler dik chihaja dyal research
+		--fixed-plugin
+
+	//Profile
+		--Ajouter message de success
+
+
+//Student
+
+	//Exams
+		--Ajouter le nom de l'exam
+		--Pas d'examens en rouge

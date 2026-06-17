@@ -1,0 +1,255 @@
+* {
+    box-sizing: border-box;
+}
+
+.no_table {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.alert_messageMod {
+    font-size: 13px;
+    display: none;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-left: 1rem;
+}
+
+.erreur {
+    margin-left: 1rem;
+    color: red;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.message-success {
+    font-weight: bold;
+    color: #2dc26b;
+    display: none;
+    font-size: 17px;
+    text-align: center;
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.link-btn {
+    width: auto;
+    display: inline-block;
+    cursor: pointer;
+    transition: transform ease-in-out 0.5s;
+}
+
+.link-btn:hover {
+    transform: scale(1.2);
+}
+
+.text-white {
+    color: white;
+}
+
+.background_red {
+    background-color: #f44336;
+}
+
+.padding {
+    padding: 10px 1rem;
+}
+
+.rounded {
+    border-radius: 15px;
+}
+
+.text_center {
+    text-align: center;
+}
+
+.transform_width {
+    transition: width ease-in-out 1s;
+}
+
+.transform_width:hover {
+    transform: scale(1.05);
+}
+
+
+.container_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+
+    padding: 1rem;
+}
+
+.container_title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+
+}
+
+.main_table {
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    width: 85%;
+    margin: 1rem auto 5rem auto;
+    height: auto;
+    box-shadow: 0 0 10px 5px rgba(230, 233, 241, 0.76);
+}
+
+.image_teach {
+    width: 50px;
+    height: 50px;
+}
+
+.title {
+    margin-left: 1rem;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.phrase_teach {
+    font-weight: 600;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+}
+
+.container_table {
+    margin-right: 1rem;
+
+    .container {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+}
+
+.responsive-table {
+    li {
+        border-radius: 3px;
+        padding: 25px 30px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 25px;
+    }
+
+    .table-header {
+        background-color: rgba(73, 3, 56, 0.71);
+        font-size: 15px;
+        box-shadow: 0 0 10px 5px rgb(0, 0, 0, 10%);
+        font-weight: 600;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+    }
+
+    .table-row {
+        background-color: #ffffff;
+        box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
+    }
+
+
+    .col-1 {
+        flex-basis: 22%;
+    }
+
+    .col-2 {
+        flex-basis: 20%;
+    }
+
+    .col-3 {
+        flex-basis: 20%;
+    }
+
+    .col-4 {
+        flex-basis: 20%;
+    }
+
+    .col-5 {
+        flex-basis: 15%;
+    }
+
+    .col-6 {
+        flex-basis: 20%;
+    }
+
+    @media all and (max-width: 767px) {
+        .table-header {
+            display: none;
+        }
+
+        .table-row {
+
+        }
+
+        li {
+            display: block;
+        }
+
+        .col {
+
+            flex-basis: 100%;
+
+        }
+
+        .col {
+            display: flex;
+
+
+            &:before {
+                color: #6C7A89;
+                padding-right: 10px;
+                content: attr(data-label);
+                flex-basis: 50%;
+                text-align: right;
+            }
+        }
+    }
+}
+
+
+/* Edit page */
+
+.flecha_div {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-left: 0.5rem;
+    justify-items: center;
+    margin-bottom: 2rem;
+}
+
+.flecha-edit-img {
+    width: 16px;
+    display: inline-block;
+    height: auto;
+    transition: transform ease-in-out 0.5s;
+}
+
+a:hover div .flecha-edit-img {
+    transform: translateX(-5px);
+}
+
+.text_retour {
+    display: inline-block;
+    font-weight: bold;
+}
+
+.div_btn_plus {
+    margin-left: 89%;
+    margin-top: 1rem;
+}
+
+.dev_links {
+    width: 95%;
+    margin: 1rem auto;
+}
+
