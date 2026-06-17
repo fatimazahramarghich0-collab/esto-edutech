@@ -1,66 +1,204 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+#  ESTO EduTech
 
-## About Laravel
+![Laravel](https://img.shields.io/badge/Laravel-Framework-red?style=for-the-badge\&logo=laravel)
+![PHP](https://img.shields.io/badge/PHP-Backend-blue?style=for-the-badge\&logo=php)
+![MySQL](https://img.shields.io/badge/MySQL-Database-orange?style=for-the-badge\&logo=mysql)
+![Status](https://img.shields.io/badge/Status-Completed-green?style=for-the-badge)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+##  Overview
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+**ESTO EduTech** is a full-stack web application developed for the **Higher School of Technology of Oujda (ESTO)**.
 
-## Learning Laravel
+It aims to **centralize and simplify academic and administrative management** by providing a secure and role-based platform for all users of the institution.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+The system supports multiple user roles:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+* 👨‍🎓 Students
+* 👩‍🏫 Teachers
+* 🧑‍💼 Department Heads
+* 🧑‍🏫 Program Coordinators
+* 🛠️ Administrators
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+##  Objectives
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+* Digitize academic and administrative workflows
+* Improve communication between stakeholders
+* Centralize academic data in a secure system
+* Provide role-based access control
+* Enhance productivity and data accessibility
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+##  Key Features
 
-## Contributing
+###  Public Interface
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+* Institutional information presentation
+* Academic programs and services overview
+* News and updates
+* Contact form
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+###  Authentication & Security
 
-## Security Vulnerabilities
+* Secure login system
+* Role-based access control (RBAC)
+* Password encryption
+* Input validation & protection
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
+###  Administrator Panel
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+* Student management (CRUD)
+* Bulk import (CSV / XLSX / TXT)
+* Department & program management
+* Modules & subjects management
+* Teacher management
+* Contact messages handling
+* Profile management
+
+---
+
+###  Teacher Dashboard
+
+* Course, TD & TP management
+* Upload learning resources
+* Exam & grading management
+* Attendance tracking
+* Workload consultation
+
+---
+
+###  Program Coordinator
+
+* Assignment of teachers to subjects
+* Teaching load management
+* Program-level coordination
+
+---
+
+###  Student Portal
+
+* Access to courses and materials
+* Download academic resources
+* View grades and attendance
+* Exam schedules
+* Personal profile management
+
+---
+
+##  Tech Stack
+
+### Backend
+
+* PHP
+* Laravel Framework
+
+### Frontend
+
+* HTML5
+* CSS3
+* JavaScript
+* Bootstrap
+
+### Database
+
+* MySQL
+* Eloquent ORM
+
+### Tools & Environment
+
+* Visual Studio Code
+* Laragon
+* Git & GitHub
+* PowerAMC
+* Astah UML
+
+---
+
+##  Architecture
+
+The project follows the **MVC (Model–View–Controller)** architecture provided by Laravel:
+
+* **Models** → Data structure & database interaction
+* **Views** → Blade templates (UI layer)
+* **Controllers** → Business logic
+* **Routes** → Application endpoints
+
+---
+
+##  Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/fatimazahramarghich0-collab/esto-edutech.git
+
+cd esto-edutech
+
+# Install dependencies
+composer install
+npm install
+
+# Environment setup
+cp .env.example .env
+php artisan key:generate
+
+# Configure database in .env then run:
+php artisan migrate
+
+# Run development server
+php artisan serve
+```
+
+---
+
+##  Security Features
+
+* Authentication system
+* Role-based authorization
+* Secure password hashing
+* Form validation & sanitization
+* Protection of sensitive data
+
+---
+
+##  Project Team
+
+* **Fatima Zahra Marghich**
+* Aya Ouzarf
+* Wissal Benali
+* Abderrahim El Ouriachi
+* Ayoub Berhili
+
+---
+
+##  Project Information
+
+This project was developed in **2024** as part of a **Final Year Internship (PFE)** at ESTO.
+
+It was published on GitHub in **2026** for portfolio demonstration and technical showcase.
+
+---
+
+## Future Improvements
+
+* Mobile application (Android / iOS)
+* Real-time notifications
+* Advanced analytics dashboard
+* Electronic document management system
+* Multi-language support (FR / AR / EN)
+
+---
+
+##  License
+
+Academic project developed for educational purposes at the **Higher School of Technology of Oujda (ESTO)**.
+
+
